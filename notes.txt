@@ -1,0 +1,16 @@
+xml.sax -> Simple API for xml
+never load full xml file into ram, only pieces. Cannot change content
+
+xml.dom -> Document Object Model
+load file fully. Possibile to read, write, rewrite.
+Skapar hierarkistruktur
+
+//Old fashion way.
+#imports
+import xml.sax
+
+#how to usually do it.
+handler = xml.sax.ContentHandler()
+parser = xml.sax.make_parser()
+parser.setContentHandler(handler)
+parser.parse('companies.xml')
